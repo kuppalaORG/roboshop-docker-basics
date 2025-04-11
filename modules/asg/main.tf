@@ -36,6 +36,16 @@ resource "aws_launch_template" "main" {
   instance_type           = var.instance_type
   vpc_security_group_ids  = [aws_security_group.main.id]
 
+  block_device_mappings {
+    device_name = "/dev/sda1"
+
+    ebs {
+      volume_size = 30   # Disk size in GB
+      volume_type = "gp3"      # gp3/gp2/io1 etc.
+      delete_on_termination = true
+    }
+  }
+
   user_data = base64encode(templatefile("${path.module}/userdata.sh", {
     env         = var.env
     role_name   = var.name
