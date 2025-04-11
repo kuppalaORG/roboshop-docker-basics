@@ -15,112 +15,112 @@ vpc = {
   default_vpc_cidr   = "172.31.0.0/16"
 }
 
-# apps = {
-#     frontend = {
-#       subnet_reference      = "web"
-#       instance_type         = "t2.micro"
-#       allow_port            = 80
-#       allow_sg_cidr         = ["10.0.1.0/24", "10.0.2.0/24"] # IP ranges allowed in SG
-#       allow_lb_sg_cidr      = ["0.0.0.0/0"]
-#       capacity              = {
-#         min = 1
-#         max = 1
-#         desired = 1
-#       }
-#       lb_rule_priority = 1
-#       lb_ref           = "public"
-#     }
-#
-#     catalogue = {
-#       subnet_reference      = "app"
-#       instance_type         = "t2.micro"
-#       allow_port            = 8080
-#       allow_sg_cidr         = ["10.0.5.0/24", "10.0.6.0/24"]
-#       allow_lb_sg_cidr    =  ["10.0.3.0/24", "10.0.4.0/24","10.0.5.0/24", "10.0.6.0/24"]
-#
-#       capacity              = {
-#         min = 1
-#         max = 1
-#         desired = 1
-#       }
-#       lb_ref           = "private"
-#       lb_rule_priority = 1
-#   }
-#     cart = {
-#       subnet_reference      = "app"
-#       instance_type         = "t2.micro"
-#       allow_port            = 8080
-#       allow_sg_cidr         = ["10.0.5.0/24", "10.0.6.0/24"]
-#       allow_lb_sg_cidr    =  ["10.0.3.0/24", "10.0.4.0/24","10.0.5.0/24", "10.0.6.0/24"]
-#
-#       capacity              = {
-#         min = 1
-#         max = 1
-#         desired = 1
-#       }
-#
-#       lb_rule_priority = 2
-#       lb_ref           = "private"
-#   }
-#     user = {
-#       subnet_reference      = "app"
-#       instance_type         = "t2.micro"
-#       allow_port            = 8080
-#       allow_sg_cidr         = ["10.0.5.0/24", "10.0.6.0/24"]
-#       allow_lb_sg_cidr    =  ["10.0.3.0/24", "10.0.4.0/24","10.0.5.0/24", "10.0.6.0/24"]
-#
-#       capacity              = {
-#         min = 1
-#         max = 1
-#         desired = 1
-#       }
-#
-#       lb_rule_priority = 3
-#       lb_ref           = "private"
-#   }
-#     shipping = {
-#       subnet_reference      = "app"
-#       instance_type         = "t2.micro"
-#       allow_port            = 8080
-#       allow_sg_cidr         = ["10.0.5.0/24", "10.0.6.0/24"]
-#       allow_lb_sg_cidr    =  ["10.0.3.0/24", "10.0.4.0/24","10.0.5.0/24", "10.0.6.0/24"]
-#       capacity              = {
-#         min = 1
-#         max = 1
-#         desired = 1
-#       }
-#       lb_rule_priority = 4
-#       lb_ref           = "private"
-#   }
-#     payment = {
-#       subnet_reference      = "app"
-#       instance_type         = "t2.micro"
-#       allow_port            = 8080
-#       allow_sg_cidr         = ["10.0.5.0/24", "10.0.6.0/24"]
-#       allow_lb_sg_cidr    =  ["10.0.3.0/24", "10.0.4.0/24","10.0.5.0/24", "10.0.6.0/24"]
-#       capacity              = {
-#         min = 1
-#         max = 1
-#         desired = 1
-#       }
-#       lb_rule_priority = 5
-#       lb_ref           = "private"
-#   }
-#     dispatch = {
-#       subnet_reference      = "app"
-#       instance_type         = "t2.micro"
-#       allow_port            = 8080
-#       allow_sg_cidr         = ["10.0.5.0/24", "10.0.6.0/24"]
-#       allow_lb_sg_cidr    =  ["10.0.3.0/24", "10.0.4.0/24","10.0.5.0/24", "10.0.6.0/24"]
-#       capacity              = {
-#         min = 1
-#         max = 1
-#         desired = 1
-#       }
-#       lb_rule_priority = 6
-#       lb_ref           = "private"
-#   }
-#   }
+apps = {
+    frontend = {
+      subnet_reference      = "web"
+      instance_type         = "t2.micro"
+      allow_port            = 80
+      allow_sg_cidr         = ["10.0.1.0/24", "10.0.2.0/24"] # IP ranges allowed in SG
+      allow_lb_sg_cidr      = ["0.0.0.0/0"]
+      capacity              = {
+        min = 1
+        max = 1
+        desired = 1
+      }
+      lb_rule_priority = 1
+      lb_ref           = "public"
+    }
+
+    catalogue = {
+      subnet_reference      = "app"
+      instance_type         = "t2.micro"
+      allow_port            = 8080
+      allow_sg_cidr         = ["10.0.5.0/24", "10.0.6.0/24"]
+      allow_lb_sg_cidr    =  ["10.0.3.0/24", "10.0.4.0/24","10.0.5.0/24", "10.0.6.0/24"]
+
+      capacity              = {
+        min = 1
+        max = 1
+        desired = 1
+      }
+      lb_ref           = "private"
+      lb_rule_priority = 1
+  }
+    cart = {
+      subnet_reference      = "app"
+      instance_type         = "t2.micro"
+      allow_port            = 8080
+      allow_sg_cidr         = ["10.0.5.0/24", "10.0.6.0/24"]
+      allow_lb_sg_cidr    =  ["10.0.3.0/24", "10.0.4.0/24","10.0.5.0/24", "10.0.6.0/24"]
+
+      capacity              = {
+        min = 1
+        max = 1
+        desired = 1
+      }
+
+      lb_rule_priority = 2
+      lb_ref           = "private"
+  }
+    user = {
+      subnet_reference      = "app"
+      instance_type         = "t2.micro"
+      allow_port            = 8080
+      allow_sg_cidr         = ["10.0.5.0/24", "10.0.6.0/24"]
+      allow_lb_sg_cidr    =  ["10.0.3.0/24", "10.0.4.0/24","10.0.5.0/24", "10.0.6.0/24"]
+
+      capacity              = {
+        min = 1
+        max = 1
+        desired = 1
+      }
+
+      lb_rule_priority = 3
+      lb_ref           = "private"
+  }
+    shipping = {
+      subnet_reference      = "app"
+      instance_type         = "t2.micro"
+      allow_port            = 8080
+      allow_sg_cidr         = ["10.0.5.0/24", "10.0.6.0/24"]
+      allow_lb_sg_cidr    =  ["10.0.3.0/24", "10.0.4.0/24","10.0.5.0/24", "10.0.6.0/24"]
+      capacity              = {
+        min = 1
+        max = 1
+        desired = 1
+      }
+      lb_rule_priority = 4
+      lb_ref           = "private"
+  }
+    payment = {
+      subnet_reference      = "app"
+      instance_type         = "t2.micro"
+      allow_port            = 8080
+      allow_sg_cidr         = ["10.0.5.0/24", "10.0.6.0/24"]
+      allow_lb_sg_cidr    =  ["10.0.3.0/24", "10.0.4.0/24","10.0.5.0/24", "10.0.6.0/24"]
+      capacity              = {
+        min = 1
+        max = 1
+        desired = 1
+      }
+      lb_rule_priority = 5
+      lb_ref           = "private"
+  }
+    dispatch = {
+      subnet_reference      = "app"
+      instance_type         = "t2.micro"
+      allow_port            = 8080
+      allow_sg_cidr         = ["10.0.5.0/24", "10.0.6.0/24"]
+      allow_lb_sg_cidr    =  ["10.0.3.0/24", "10.0.4.0/24","10.0.5.0/24", "10.0.6.0/24"]
+      capacity              = {
+        min = 1
+        max = 1
+        desired = 1
+      }
+      lb_rule_priority = 6
+      lb_ref           = "private"
+  }
+  }
 
 db = {
   mongod = {
